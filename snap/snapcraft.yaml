@@ -1,4 +1,4 @@
-name: iconvwadw
+name: icon-browser-adw
 version: '0.1'
 summary: Icon Browser for Adwaita
 description: icon-browser-adw allows you to view the gnome desktop icons with adwaita, allowing you to copy the icon names for use in your projects.
@@ -13,7 +13,7 @@ platforms:
   arm64:
 
 apps:
-  iconvwadw:
+  icon-browser-adw:
     command: bin/iconvwadw
     desktop: ${SNAPCRAFT_STAGE}/share/applications/io.github.rsvzz.iconvwadw.desktop
     #extensions: [gnome]
@@ -26,7 +26,7 @@ apps:
       - wayland
 
 parts:
-  iconvwadw:
+  icon-browser-adw:
     plugin: meson
     source: https://github.com/rsvzz/icon-browser-adw.git
     source-type: git
@@ -43,7 +43,7 @@ parts:
       snapcraftctl build
       rm -r ${SNAPCRAFT_PART_INSTALL}/share/applications/io.github.rsvzz.iconvwadw.desktop
 
-  iconvwadw-files:
+  icon-browser-adw-files:
     source: .
     plugin: dump
     override-build: |
