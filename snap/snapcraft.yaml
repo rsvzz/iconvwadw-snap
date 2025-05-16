@@ -16,7 +16,7 @@ platforms:
 apps:
   icon-browser-adw:
     command: bin/iconvwadw
-    desktop: ${SNAPCRAFT_STAGE}/share/applications/io.github.rsvzz.iconvwadw.desktop
+    desktop: usr/share/applications/io.github.rsvzz.iconvwadw.desktop
     extensions: [gnome]
     common-id: io.github.rsvzz.iconvwadw
     slots: [icon-browser-adw-dbus]
