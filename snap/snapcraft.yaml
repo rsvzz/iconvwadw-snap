@@ -16,7 +16,7 @@ platforms:
 apps:
   icon-browser-adw:
     command: bin/iconvwadw
-    desktop: usr/share/applications/io.github.rsvzz.iconvwadw.desktop
+    desktop: share/applications/io.github.rsvzz.iconvwadw.desktop
     extensions: [gnome]
     common-id: io.github.rsvzz.iconvwadw
     slots: [icon-browser-adw-dbus]
@@ -42,13 +42,7 @@ parts:
     override-build: |
       snapcraftctl build
       rm -r ${SNAPCRAFT_PART_INSTALL}/share/applications/io.github.rsvzz.iconvwadw.desktop
-
-  icon-browser-adw-files:
-    source: .
-    plugin: dump
-    override-build: |
-      mkdir ${SNAPCRAFT_PART_INSTALL}/share/applications -p
-      cp ${SNAPCRAFT_PART_BUILD}/data/io.github.rsvzz.iconvwadw.desktop ${SNAPCRAFT_PART_INSTALL}/share/applications 
+      cp -v ${SNAPCRAFT_PROJECT_DIR}/data/io.github.rsvzz.iconvwadw.desktop ${SNAPCRAFT_PART_INSTALL}/share/applications
 
 slots:
   icon-browser-adw-dbus:
