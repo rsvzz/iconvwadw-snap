@@ -31,16 +31,14 @@ parts:
     plugin: meson
     source: https://github.com/rsvzz/iconvwadw.git
     source-type: git
-    source-tag: 0.1.17
+    source-tag: 0.1.20
     meson-parameters:
       - --prefix=/
       - --buildtype=release
     build-packages:
       - meson
-      - libadwaita-1-dev
     stage-packages:
       - adwaita-icon-theme
-      - libadwaita-1-0
     override-build: |
       snapcraftctl build
       rm -r ${SNAPCRAFT_PART_INSTALL}/share/applications/io.github.rsvzz.iconvwadw.desktop
